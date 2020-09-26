@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+body * {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    text-decoration: unset;
+    font-size: 20px;
+    line-height: 1.2;
+    margin-top: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+body {
+    background: rgb(236, 230, 233);
+}
+
+.main_container {
+    position: absolute;
+    width: 800px;
+    height: 500px;
+    z-index: 15;
+    top: 50%;
+    left: 50%;
+    margin: -250px 0 0 -420px;
+    background-size: cover;
+    border: 1px solid black;
+}
+
+.main_container::after {
+    content: "";
+    background-image: url(http://clipart-library.com/images/8iAbqEK5T.jpg);
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+img {
+    width: 26%;
+    padding-right: 2.8rem;
+    padding-top: 1.3rem;
+    
+}
+
+h1 {
+    font-size: 3rem;
+    padding-left: 2rem;
+    margin: 4rem 1rem;
+    font-family: 'Pacifico', cursive;
+}
+
+.content {
+    display: inline-flex;
+}
+
+p {
+    margin: 0;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    font-family: 'Dancing Script', cursive;
+}
+
+.content form {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    color: black;
+    padding-top: 1rem;
+    border: none;
+    outline: none;
+}
+
+input {
+    margin: 1rem 1rem;
+    border: none;
+    border-bottom: 0.1rem solid black;
+    background: transparent;
+    font-family: 'Dancing Script', cursive;
+    pointer-events: painted;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: black;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    display: block;
+    width: 50%;
+    margin-top: 3rem;
+    padding: 0.1rem;
+    background: #BAD1CE;
+    color: inherit;
+    border-radius: 10px;
+    cursor: pointer;
+    pointer-events: unset;
+}
