@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excuse Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#btn").click(function() {
+                $("#excuse").text(excuse())
+            });
+        });
+
+        const who = [
+            null,
+            "A helicopter",
+            "Some birds",
+            "My grandparent",
+            "Elon Musk",
+            "My dog"
+        ];
+
+        const action = [null, "crashed", "pooped over", "forgot", "destroyed", "ate"];
+
+        const what = [
+            null,
+            "my roof",
+            "my homework",
+            "my pencil",
+            "my girlfriend",
+            "my best friend"
+        ];
+
+        const when = [
+            null,
+            "this morning.",
+            "yesterday night.",
+            "some minutes ago.",
+            "a minute ago.",
+            "today."
+        ];
+
+        function random() {
+            return Math.floor(Math.random() * 5) + 1;
+        }
+
+
+        function excuse() {
+            const aNumber = random();
+            const text =
+                // Change [random()] for [aNumber] if you want to keep the order of sentence.
+                who[random()] +
+                " " +
+                action[random()] +
+                " " +
+                what[random()] +
+                " " +
+                when[random()];
+
+            return text;
+        }
+    </script>
+    <style>
+        body {
+            background: #f0f0f0;
+        }
+        
+        #container {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        p {
+            font-size: 5rem;
+            font-family: 'Nunito', sans-serif;
+        }
+        
+        @media (max-width: 600px) {
+            p {
+                font-size: 3.5rem
+            }
+        }
+        
+        button {
+            position: fixed;
+            left: 50%;
+            top: 90%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+
+</head>
+
+<body>
+    <button id="btn" class="btn btn-info btn-lg">Get Excuse</button>
+    <div id="container">
+        <div id="quotes">
+            <p id="excuse">Teacher I couldn't do the homework...</p>
+        </div>
+    </div>
+</body>
+
+</html>
