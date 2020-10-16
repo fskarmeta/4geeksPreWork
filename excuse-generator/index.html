@@ -39,25 +39,24 @@
             "today."
         ];
 
-        function random() {
-            return Math.floor(Math.random() * 5);
-        }
+       function random(arrayLength) {
+    return Math.floor(Math.random() * arrayLength);
+}
 
 
-        function excuse() {
-            const aNumber = random();
-            const text =
-                // Change [random()] for [aNumber] if you want to keep the order of sentence.
-                who[random()] +
-                " " +
-                action[random()] +
-                " " +
-                what[random()] +
-                " " +
-                when[random()];
+function excuse() {
+    
+    const text =
+        who[random(who.length)] +
+        " " +
+        action[random(action.length)] +
+        " " +
+        what[random(what.length)] +
+        " " +
+        when[random(when.length)];
 
-            return text;
-        }
+    return text;
+}
     </script>
     <style>
         body {
