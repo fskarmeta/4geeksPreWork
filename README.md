@@ -8,4 +8,4 @@ HTML CSS IG Clone
 ![Screenshot](./Screenshot_ig.png)
 
 JavaScript, CSS, HTML Excuse generator
-![Screenshot](./Screenshot_letter.png)
+![Screenshot](./Screenshot_excuse.png)
